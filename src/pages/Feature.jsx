@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Feature1 from "./Features";
 import { BiLogoPlayStore } from "react-icons/bi";
 import { IoLogoApple } from "react-icons/io5";
 
 const Feature = () => {
-  const [xyz, setXyz] = useState('abvl');
-
-  useEffect(() => {
-    // You can add any logic here if needed
-  });
 
   return (
     <div className="">

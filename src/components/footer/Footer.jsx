@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookSquare, FaTwitter, FaLinkedin, FaInstagram, FaPhone,  } from "react-icons/fa";
+import { FaPhone,  } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 
@@ -32,7 +32,7 @@ const Footer = () => {
         <footer className="bg-gradient-to-b from-gray-900 to-black text-white py-16">
             <div className="container mx-auto px-4 md:px-6 max-w-7xl">
                 {/* Main Footer Content */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                     {/* Brand Section */}
                     <div className="lg:col-span-1">
                         <h2 className="text-3xl font-bold text-[#005EB8] mb-4">Booked</h2>
@@ -97,37 +97,15 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Social Media */}
-                    <div>
-                        <h3 className="text-lg font-semibold mb-6 text-white">Follow Us</h3>
-                        <div className="flex gap-4">
-                            <a href="#" className="bg-[#005EB8] p-3 rounded-lg hover:bg-[#004A94] transition duration-200">
-                                <FaFacebookSquare size={20} />
-                            </a>
-                            <a href="#" className="bg-[#005EB8] p-3 rounded-lg hover:bg-[#004A94] transition duration-200">
-                                <FaTwitter size={20} />
-                            </a>
-                            <a href="#" className="bg-[#005EB8] p-3 rounded-lg hover:bg-[#004A94] transition duration-200">
-                                <FaInstagram size={20} />
-                            </a>
-                            <a href="#" className="bg-[#005EB8] p-3 rounded-lg hover:bg-[#004A94] transition duration-200">
-                                <FaLinkedin size={20} />
-                            </a>
-                        </div>
-                    </div>
+                    
                 </div>
 
                 {/* Divider */}
-                <div className="border-t border-gray-700 my-8"></div>
+                <div className="border-t border-gray-700 my-4"></div>
 
                 {/* Bottom Footer */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+                <div className="text-center gap-4 text-sm text-gray-400">
                     <p>&copy; 2024 Booked. All rights reserved.</p>
-                    <div className="flex gap-6">
-                        <a href="#" className="hover:text-[#005EB8] transition duration-200">Privacy Policy</a>
-                        <a href="#" className="hover:text-[#005EB8] transition duration-200">Terms of Service</a>
-                        <a href="#" className="hover:text-[#005EB8] transition duration-200">Cookie Settings</a>
-                    </div>
                 </div>
             </div>
         </footer>
