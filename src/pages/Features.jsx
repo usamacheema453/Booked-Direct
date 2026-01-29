@@ -1,59 +1,83 @@
 import React from "react";
-import Popular from "./popular";
-import { FaScissors } from "react-icons/fa6";
+import { FaShieldAlt, FaClipboardList, FaTrophy, FaHeadset, FaLock, FaMobileAlt } from "react-icons/fa";
 
 const Features = () => {
     const features = [
         {
-            href: "/images/features/vector1.png",
-            describe: 'Wide range of saloons & Spa '
+            icon: FaShieldAlt,
+            title: 'Secure & Safe',
+            describe: 'Your data and payment information are fully protected with SSL encryption'
         },
         {
-            href: '/images/features/vector2.png',
-            describe: 'Hassle-Free 24/7 Booking'
+            icon: FaClipboardList,
+            title: 'Easy Management',
+            describe: 'Manage all your bookings in one place with instant confirmations'
         },
         {
-            href: '/images/features/vector3.png',
-            describe: 'Exclusive Deals & Offers'
+            icon: FaTrophy,
+            title: 'Top Rated',
+            describe: 'Choose from verified and highly-rated service providers'
         },
         {
-            href: '/images/features/vector4.png',
-            describe: 'Feedback Rating & Reviews'
+            icon: FaHeadset,
+            title: '24/7 Support',
+            describe: 'Get instant help from our customer support team anytime'
+        },
+        {
+            icon: FaLock,
+            title: 'Privacy First',
+            describe: 'Your personal information is never shared with third parties'
+        },
+        {
+            icon: FaMobileAlt,
+            title: 'Mobile Friendly',
+            describe: 'Book appointments on the go with our fully responsive app'
         }
     ];
 
     return (
-        <>
-            <div>
-                <Popular />
+        <section className="py-20 bg-white">
+            <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+                {/* Section Header */}
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                        Why Choose <span className="text-[#005EB8]">Booked</span>?
+                    </h2>
+                    <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                        Experience the seamless booking platform designed for your wellness journey
+                    </p>
+                </div>
 
-                <div className="container px-6 md:mx-auto bg-[#F5F5F5] rounded-2xl ">
-                    <div className="p-8">
-                    <h1 className="text-xl italic inline-block pb-1 relative">
-                        Features
-                        <span className="absolute left-0 bottom-0 h-1 w-full bg-[#D32F2F]"></span>
-                        </h1>
-                        <p className="text-base md:text-2xl py-3">
-                            Travelling all the way from home and <br /> getting your appointment booked.
-                        </p>
-
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                            {features.map((item, index) => (
-                                <div className="flex flex-col  bg-white p-4 rounded-lg" key={index}>
-                                    {/* Icon at the start, centered */}
-                                    <img src={item.href} alt={item.describe} className="w-7 h-7 mb-2 " />
-                                    {/* Description centered */}
-                                    <p className=" pt-5">{item.describe}</p>
+                {/* Features Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {features.map((feature, index) => {
+                        const IconComponent = feature.icon;
+                        return (
+                            <div key={index} className="bg-gradient-to-br from-white to-gray-50 border-2 border-gray-200 rounded-lg p-8 hover:border-[#005EB8] hover:shadow-lg transition duration-300">
+                                {/* Icon */}
+                                <div className="w-16 h-16 bg-gradient-to-br from-[#005EB8] to-[#0047A3] rounded-lg flex items-center justify-center mb-6">
+                                    <IconComponent className="text-white text-2xl" />
                                 </div>
-                            ))}
-                        </div>
 
+                                {/* Content */}
+                                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                                <p className="text-gray-600 leading-relaxed">{feature.describe}</p>
+                            </div>
+                        );
+                    })}
+                </div>
 
-
-                    </div>
+                {/* Call to Action */}
+                <div className="mt-16 text-center">
+                    <p className="text-gray-700 text-lg mb-6">
+                        Join thousands of satisfied customers who trust Booked for their wellness appointments
+                    </p>
+                    <button className="bg-[#D32F2F] text-white py-3 px-8 rounded-full hover:bg-[#B71C1C] transition duration-300 font-semibold">
+                        Download App Now
+                    </button>
                 </div>
             </div>
-        </>
+        </section>
     );
 }
 
